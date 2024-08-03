@@ -1,0 +1,91 @@
+/* estilos.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.contenedor {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pestanas {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.boton-pestana {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.boton-pestana:hover {
+    background-color: #555;
+}
+
+.seccion {
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}

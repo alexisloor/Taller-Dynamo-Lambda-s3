@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Evento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Registro de Evento</h1>
+    
+    <!-- Pestañas de Navegación -->
+    <div class="pestanas">
+      <button class="boton-pestana" onclick="mostrarSeccion('seccion-formulario')">Formulario de Registro</button>
+      <button class="boton-pestana" onclick="mostrarSeccion('seccion-lista')">Lista de Registros</button>
+    </div>
+    
+    <!-- Sección del Formulario de Registro -->
+    <div id="seccion-formulario" class="seccion">
+      <form id="formulario-registro">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+
+        <label for="cedula">Número de Cédula:</label>
+        <input type="text" id="cedula" name="cedula" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="foto">Foto:</label>
+        <input type="file" id="file-upload" name="foto" accept="image/*">
+        <button id="upload-button">Subir</button>
+
+        <button type="submit">Registrar</button>
+      </form>
+    </div>
+    
+    <!-- Sección de la Lista de Registros -->
+    <div id="seccion-lista" class="seccion" style="display: none;">
+      <h2>Lista de Registros</h2>
+      <button onclick="cargarRegistros()">Mostrar Registros</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Número de Cédula</th>
+            <th>Correo Electrónico</th>
+            <th>Foto</th>
+          </tr>
+        </thead>
+        <tbody id="lista-registros">
+          <!-- Los registros se añadirán dinámicamente aquí -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
